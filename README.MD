@@ -9,5 +9,4 @@ Repository includes: an R script - run_Analysis.R and (codebook) named on CodeBo
 - Run `Rscript /run_analysis.R`
 - Both datasets created by teh sript should get created in the current directory
 
-- Note I used the MASS package to and the write.matrix() function to write to the text file.
 

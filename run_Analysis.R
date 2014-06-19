@@ -40,11 +40,11 @@ stackedclean <- stacked[,datapointsnames]
 ## change column to "subjects"
 names(stackedclean)[68] <- "Subjects"
 ## Final clean dataset
-write.matrix(stackedclean, "tidydataset.txt", sep="\t")
+write.table(stackedclean, "tidydataset.txt", sep="\t")
 
 ### Create a second tidy data set with just the means of the subjects
 tidy = aggregate(stackedclean, by=list(activity=stackedclean$"Activity", subject=stackedclean$"Subjects"), mean)
 # Remove the subject and activity column, since a mean of those has no use
 tidy[,70] = NULL
 tidy[,69] = NULL
-write.matrix(tidy, file = "tidydataset2.txt", sep="\t")
+write.table(tidy, file = "tidydataset2.txt", sep="\t")
